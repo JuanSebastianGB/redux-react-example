@@ -1,8 +1,10 @@
 import Navbar from './components/Navbar';
-function App() {
+import UserList from './components/UserList';
+function App () {
   return (
     <>
-      <Navbar />
+      <Navbar brand='Redux React App' />
+      <UserList />
     </>
   );
 }

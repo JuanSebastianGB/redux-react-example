@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({ brand }) => {
   return (
     <>
-      <nav className='navbar navbar-darl bg-dark'>
+      <nav className='navbar navbar-dark bg-dark'>
         <div className='container'>
-          <a className='navbar-brand' href='/'>React Redux Appp</a>
+          <a className='navbar-brand' href='/'>{brand}</a>
         </div>
       </nav>
     </>
