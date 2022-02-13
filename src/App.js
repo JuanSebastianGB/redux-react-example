@@ -1,10 +1,14 @@
 import Navbar from './components/Navbar';
 import UserList from './components/UserList';
+import { Provider } from 'react-redux';
+import store from './store';
 function App () {
   return (
     <>
-      <Navbar brand='Redux React App' />
-      <UserList />
+      <Provider store={store}>
+        <Navbar brand='Redux React App' />
+        <UserList />
+      </Provider>
     </>
   );
 }

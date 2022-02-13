@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
+import React, { useEffect } from 'react';
+import { getUsers } from '../store/slices/users';
+import { useDispatch, useSelector } from 'react-redux';
 const UserList = () => {
-  const [users, setUsers] = useState([]);
-  const url = 'https://reqres.in/api/users?page=2';
-  const getUsers = async () => {
-    const users = await axios.get(url);
-    setUsers(users.data.data);
-  };
+  const { list: users } = useSelector(state => state.users);
+  const dispatch = useDispatch();
   useEffect(() => {
-    getUsers();
-  }, []);
+    dispatch(getUsers());
+  }, [dispatch]);
 
   return (
     <div className='container'>
