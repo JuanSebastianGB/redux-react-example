@@ -57,8 +57,16 @@ export const getUsers = () => async (dispatch) => {
 };
 
 ```
-FInally y inside the specific component is called like follow
+FInally inside the specific component is called like follow
 
+
+### Imports
+
+```js
+import React, { useEffect } from 'react';
+import { getUsers } from '../store/slices/users';
+import { useDispatch, useSelector } from 'react-redux';
+```
 ```js
   const { list: users } = useSelector(state => state.users);
   const dispatch = useDispatch();
